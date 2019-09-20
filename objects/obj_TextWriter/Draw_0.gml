@@ -1,2 +1,88 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Iterate through 
+
+
+// The x and y Progression through the line position
+var xProgPos= 0;
+
+var writeProgress = 0;
+
+#region Preloop StateMachine Logic
+	
+switch(DrawStatus)
+{
+	case (TextWritingStatus.Empty):
+		break;
+	case (TextWritingStatus.Writing):
+		if (StartTime == 0) StartTime = current_time;
+		writeProgress = (current_time - StartTime) / TotalWriteTime;			
+		
+		#region Initialize data_TextObj required data
+		
+		totalCharCount = 0;
+		for	(var i = 0; i <array_length_1d(TextToWrite); i++)
+			totalCharCount += string_length(TextToWrite[i].TextToDisplay);
+		
+		prevEndTime = 0;
+		
+		for	(var i = 0; i <array_length_1d(TextToWrite); i++)
+		{
+			percentOfTotal = string_length(TextToWrite[i].TextToDisplay) / totalCharCount;
+			TextToWrite[i].DisplayStartTime = prevEndTime;			
+			TextToWrite[i].DisplayEndTime = TextToWrite[i].DisplayStartTime + percentOfTotal;				
+			prevEndTime = TextToWrite[i].DisplayEndTime;
+		}
+		
+		#endregion		
+		break;	
+	case (TextWritingStatus.Displaying):
+		break;
+	case (TextWritingStatus.Clearing):
+		break;
+}
+	
+#endregion
+
+
+for( var i = 0 ; i < array_length_1d(TextToWrite); i++)
+{
+	
+	with(TextToWrite[i]) 
+	{
+			//Setup the font rendering for the given TextToWrite
+		draw_set_font(TextFont);
+		draw_set_color(TextColor); 
+		
+		#region Draw State Machine
+	
+		switch(other.DrawStatus)
+		{
+			case (TextWritingStatus.Empty):
+					//Might not need anything here
+					other.StartTime = 0; // Set start time to trigger a new one when writing begins
+				break;
+			case (TextWritingStatus.Writing):			
+				currentPhase = writeProgress / other.TotalWriteTime;
+			
+				piecePhase = Constrain(currentPhase, DisplayStartTime, DisplayEndTime);			
+				relativePiecePhase = (piecePhase - DisplayStartTime) / (DisplayEndTime - DisplayStartTime);
+				
+				copyIndexTarget = floor(string_length(TextToDisplay)*relativePiecePhase);
+				TextCurrentDisplay = string_copy(TextToDisplay, 0, copyIndexTarget);
+				
+				if (currentPhase == 1) other.DrawStatus = TextWritingStatus.Displaying;
+				//No Breaking, bleed directly into the next line
+			case (TextWritingStatus.Displaying):
+				draw_text_ext(x + xProgPos, y, TextCurrentDisplay, other.lineHeight, other.maxLineLength);
+				break;
+			case (TextWritingStatus.Clearing):
+				//Start clearing out written text, only able to write again when status changes to Empty
+				TextCurrentDisplay = ""; 
+				
+				other.DrawStatus = TextWritingStatus.Empty;
+				break;
+		}	
+		#endregion
+			//update the xProg for the text wrapping feature
+		xProgPos += string_width_ext(TextToDisplay, other.lineHeight, other.maxLineLength) + other.SpaceBuff;
+	} //End of With(TextToWrite[i])
+}
