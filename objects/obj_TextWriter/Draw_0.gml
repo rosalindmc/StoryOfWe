@@ -6,6 +6,12 @@ var xProgPos= 0;
 
 var writeProgress = 0;
 
+//Box
+draw_set_color(c_black)
+draw_rectangle(2,470,1022,766,false)
+draw_set_color(c_white)
+draw_rectangle(2,470,1022,766,true)
+
 #region Preloop StateMachine Logic
 	
 switch(DrawStatus)
@@ -19,12 +25,12 @@ switch(DrawStatus)
 		#region Initialize data_TextObj required data
 		
 		totalCharCount = 0;
-		for	(var i = 0; i <array_length_1d(TextToWrite); i++)
+		for	(var i = 0; i < TextCount; i++)
 			totalCharCount += string_length(TextToWrite[i].TextToDisplay);
 		
 		prevEndTime = 0;
 		
-		for	(var i = 0; i <array_length_1d(TextToWrite); i++)
+		for	(var i = 0; i < TextCount; i++)
 		{
 			percentOfTotal = string_length(TextToWrite[i].TextToDisplay) / totalCharCount;
 			TextToWrite[i].DisplayStartTime = prevEndTime;			
@@ -43,7 +49,7 @@ switch(DrawStatus)
 #endregion
 
 
-for( var i = 0 ; i < array_length_1d(TextToWrite); i++)
+for( var i = 0 ; i < TextCount; i++)
 {
 	
 	with(TextToWrite[i]) 
@@ -86,3 +92,4 @@ for( var i = 0 ; i < array_length_1d(TextToWrite); i++)
 		xProgPos += string_width_ext(TextToDisplay, other.lineHeight, other.maxLineLength) + other.SpaceBuff;
 	} //End of With(TextToWrite[i])
 }
+

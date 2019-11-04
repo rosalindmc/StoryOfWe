@@ -2,12 +2,13 @@
 {
     "name": "rm_UITesting",
     "id": "6b2d7730-3892-4690-805f-d765a97097bf",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "2a5e26e0-a981-4e3a-ad50-36249272e34b"
+        "2a5e26e0-a981-4e3a-ad50-36249272e34b",
+        "84f4ca88-f71b-4a07-a001-f157a935e8f8"
     ],
     "IsDnD": false,
     "layers": [
@@ -25,7 +26,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+{"name": "inst_4CD18C24","id": "84f4ca88-f71b-4a07-a001-f157a935e8f8","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_4CD18C24","objId": "73eac2b8-d0da-4306-a328-78625afec928","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 448,"y": 192}
             ],
             "layers": [
 
