@@ -1,4 +1,7 @@
-var font
+//newLine, character, font, text, null
+//New textbox with new dialog
+
+var font, i
 
 with(data_TextObj)
 {
@@ -6,9 +9,8 @@ with(data_TextObj)
 }
 
 canContinue = false
-autoContinue = argument0
 
-switch(argument2)
+switch(argument1)
 {
 	case "fnt_Default": font = fnt_Default break
 	case "fnt_Fancy": font = fnt_Fancy break
@@ -21,12 +23,12 @@ with(obj_TextWriter)
 	
 	//Create new text block
 	TextToWrite[TextCount] = instance_create_layer(x,y,"DataObjects",data_TextObj)
-	SpeakingCharacter = argument1
+	SpeakingCharacter = argument0
 	TextToWrite[TextCount].TextFont = font
-	TextToWrite[TextCount].TextToDisplay = argument3
+	TextToWrite[TextCount].TextToDisplay = argument2
 	StartTime = current_time
 	
 	TextCount += 1
 }
 
-i = argument4
+i = argument3

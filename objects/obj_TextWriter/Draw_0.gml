@@ -11,6 +11,7 @@ draw_set_color(c_black)
 draw_rectangle(2,470,1022,766,false)
 draw_set_color(c_white)
 draw_rectangle(2,470,1022,766,true)
+draw_set_valign(fa_top)
 
 #region Preloop StateMachine Logic
 	
