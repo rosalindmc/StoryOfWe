@@ -8,6 +8,7 @@ autoContinue = true
 switch(argument1)
 {
 	case "Eleanore": char = spr_eleanoreTemp break
+	case "Blonde Eleanore": char = spr_eleanoreTemp1 break
 }
 
 num = real(argument0)
@@ -16,5 +17,4 @@ num = real(argument0)
 global.paperDoll[num].sprite_index = char
 global.paperDoll[num].costume = argument2
 global.paperDoll[num].name = argument1
-
-i = argument3
+global.paperDoll[num].x = real(argument3)*room_width

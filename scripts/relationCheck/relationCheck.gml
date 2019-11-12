@@ -8,8 +8,7 @@ switch(argument0)
 	case "Eleanore": c = 0 break
 }
 
-
 if global.charRelation[c] >= real(argument1) and global.charRelation[c] <= real(argument2) 
 {
-	scriptLine = argument3-1
+	scriptLine = argument3-2
 }

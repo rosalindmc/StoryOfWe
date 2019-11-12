@@ -1,7 +1,7 @@
-//updateChar, doll, mood, x, y
+//updateChar, doll, mood, null, null
 //Move and change the mood of a given paperdoll
 
-var char, num, pose, i 
+var num, pose, i
 
 autoContinue = true
 
@@ -15,5 +15,6 @@ switch(argument1)
 num = real(argument0)
 
 global.paperDoll[num].mood = pose
-global.paperDoll[num].xGoTo = real(argument2)
-global.paperDoll[num].yGoTo = real(argument3)
+
+i = argument2
+i = argument3

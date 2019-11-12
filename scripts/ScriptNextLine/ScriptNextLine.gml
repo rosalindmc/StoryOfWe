@@ -8,12 +8,16 @@ switch(ds_grid_get(grid, 0, scriptLine))
 	case "contLine": action = contLine autoContinue = false break
 	case "contLineAuto": action = contLine autoContinue = true break
 	case "defineChar": action = defineChar autoContinue = true break
-	case "updateChar": action = updateChar autoContinue = true break
+	case "updateCharPosition": action = updateCharPosition autoContinue = true break
+	case "updateCharMood": action = updateCharMood autoContinue = true break
 	case "swapScript": action = swapScript autoContinue = true break
 	case "addChoice": action = addChoice autoContinue = true break
 	case "clearChoice": action = clearChoice autoContinue = true break
 	case "relationChange": action = relationChange autoContinue = true break
 	case "relationCheck": action = relationCheck autoContinue = true break
+	case "cutTo": action = cutTo autoContinue = true break
+	case "charVibrate": action = charVibrate autoContinue = true break	
+	case "charRecolour": action = charRecolour autoContinue = true break
 }
 
 script_execute(action,ds_grid_get(grid, 1, scriptLine), ds_grid_get(grid, 2, scriptLine), ds_grid_get(grid, 3, scriptLine),  ds_grid_get(grid, 4, scriptLine))
