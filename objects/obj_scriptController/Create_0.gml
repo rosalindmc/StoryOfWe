@@ -23,4 +23,7 @@ global.charRelation[2] = 0
 global.charRelation[3] = 0
 global.charRelation[4] = 0
 
+global.flagCount = 0
+global.flag[0] = "No Flag"
+
 ScriptNextLine()

@@ -20,9 +20,6 @@ else if autoContinue = true
 	ScriptNextLine()
 }
 
-//Temp Fix
-canContinue = true
-
 if mouse_check_button_pressed(mb_left)
 {	
 	if canContinue = true
