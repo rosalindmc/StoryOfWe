@@ -1,5 +1,7 @@
 /// @description Insert description here
-// You can write your code in this editor
+// You can writ, mif ({
+
+draw_sprite_ext(backdropVis,0,0,0,1,1,0,c_white,backAlpha)
 
 /*Temporary
 for(i = 0; i < global.writer.TextCount; i++)

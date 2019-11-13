@@ -18,6 +18,7 @@ switch(ds_grid_get(grid, 0, scriptLine))
 	case "cutTo": action = cutTo autoContinue = true break
 	case "charVibrate": action = charVibrate autoContinue = true break	
 	case "charRecolour": action = charRecolour autoContinue = true break
+	case "swapBackdrop": action = swapBackdrop autoContinue = true break
 }
 
 script_execute(action,ds_grid_get(grid, 1, scriptLine), ds_grid_get(grid, 2, scriptLine), ds_grid_get(grid, 3, scriptLine),  ds_grid_get(grid, 4, scriptLine))

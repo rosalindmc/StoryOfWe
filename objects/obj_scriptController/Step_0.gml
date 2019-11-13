@@ -39,3 +39,16 @@ if keyboard_check_pressed(ord("R"))
 	game_restart()
 }
 
+if backdropVis != backdrop
+{
+	backAlpha += (0-backAlpha)*.05
+	
+	if backAlpha <= .05
+	{
+		backdropVis = backdrop
+	}
+}
+else
+{
+	backAlpha += (1-backAlpha)*.05
+}

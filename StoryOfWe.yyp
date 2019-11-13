@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "2eb2a69c-e30a-49ef-b9a8-658e1631504f",
+            "Value": {
+                "id": "2d304d52-e667-4d1e-b8ea-5982ba0c7304",
+                "resourcePath": "sprites\\spr_none\\spr_none.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "34ec624b-5bc3-43c4-a875-d53f43784796",
             "Value": {
                 "id": "e1a21550-343c-4d52-9982-42d0d91f22d3",
@@ -140,6 +148,14 @@
                 "id": "13c055ea-70d3-4125-8348-27322a09c5fc",
                 "resourcePath": "scripts\\Wrap\\Wrap.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "492b6f49-7723-4077-9e9c-567055a22aae",
+            "Value": {
+                "id": "fbf51981-209b-4879-9166-c0fccc525390",
+                "resourcePath": "sprites\\spr_backdrop2\\spr_backdrop2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -351,6 +367,14 @@
             }
         },
         {
+            "Key": "aac696c4-2bf8-4015-8946-c4b13b1015e3",
+            "Value": {
+                "id": "9ae562a2-9721-490f-9ae0-7e97b328bf62",
+                "resourcePath": "sprites\\spr_backdrop1\\spr_backdrop1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ad5db0f3-8ab3-44f5-9877-b44eeb4185e1",
             "Value": {
                 "id": "9e02c1b0-f086-4f51-a28f-97aad2e65712",
@@ -527,6 +551,14 @@
             }
         },
         {
+            "Key": "f4cbb78b-7f75-4d05-8aca-540ae1d804ba",
+            "Value": {
+                "id": "6077fed6-ab95-4e8e-b131-4fff6cc02377",
+                "resourcePath": "scripts\\swapBackdrop\\swapBackdrop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f758edeb-41a3-4b18-8204-6b4511553976",
             "Value": {
                 "id": "1d1011fd-b99d-4624-bfa2-9c85fbf3e010",
@@ -565,6 +597,7 @@
         "54906643-3f18-480c-b81a-35d7e199553e",
         "553d2016-7f91-4a67-a6b5-6a8606a5014b",
         "e6777db3-2f28-442a-be90-74f7deb33634",
+        "f4cbb78b-7f75-4d05-8aca-540ae1d804ba",
         "86fef6b5-6b4c-4fce-9247-07667d77be93"
     ],
     "tutorial": ""
