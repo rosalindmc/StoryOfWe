@@ -31,11 +31,6 @@ if mouse_check_button_pressed(mb_left)
 	}
 }
 
-if keyboard_check_pressed(ord("R"))
-{
-	game_restart()
-}
-
 if backdropVis != backdrop
 {
 	backAlpha += (0-backAlpha)*.05
@@ -48,4 +43,38 @@ if backdropVis != backdrop
 else
 {
 	backAlpha += (1-backAlpha)*.05
+}
+
+if global.nameChange = false
+{
+	if keyboard_check_pressed(ord("1"))
+	{
+		save("savefile1.ini")
+	}
+	if keyboard_check_pressed(ord("2"))
+	{
+		save("savefile2.ini")
+	}
+	if keyboard_check_pressed(ord("3"))
+	{
+		save("savefile3.ini")
+	}
+
+	if keyboard_check_pressed(ord("Q"))
+	{
+		load("savefile1.ini")
+	}
+	if keyboard_check_pressed(ord("W"))
+	{
+		load("savefile2.ini")
+	}
+	if keyboard_check_pressed(ord("E"))
+	{
+		load("savefile3.ini")
+	}
+	
+	if keyboard_check_pressed(ord("R"))
+	{
+		game_restart()
+	}
 }

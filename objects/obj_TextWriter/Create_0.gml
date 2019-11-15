@@ -11,8 +11,6 @@ DrawStatus = TextWritingStatus.Writing;
 maxLineLength = 480;
 lineHeight = 10;
 
-
-
 //Filled with text lines to be drawn sequenquentially 
 TextToWrite = [];
 TextCount = 0
@@ -25,6 +23,8 @@ StartTime = 0;
 TotalWriteTime = 10;
 
 SpaceBuff = 4; //Needed to be added between array elements, cause of issues;
+
+y += 1000
 
 /*
 #region temporary to be built systematically

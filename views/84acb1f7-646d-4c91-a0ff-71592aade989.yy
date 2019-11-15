@@ -19,7 +19,12 @@
         "e6777db3-2f28-442a-be90-74f7deb33634",
         "f4cbb78b-7f75-4d05-8aca-540ae1d804ba",
         "37db96e6-0870-427c-996b-8a6871dfc214",
-        "801884ed-2af0-4e93-baeb-36f93653f805"
+        "801884ed-2af0-4e93-baeb-36f93653f805",
+        "1d4c80f9-7453-4488-ba19-5f474eb949a1",
+        "23c26f21-0546-4acb-a705-1c74ed488f5f",
+        "627b50db-8644-4878-bdcb-c00ac0c46a12",
+        "2c5e04c6-3d87-45fc-96a6-5617f16ae540",
+        "ec28785f-3442-48ee-9722-669b2c68913a"
     ],
     "filterType": "GMScript",
     "folderName": "Actions",

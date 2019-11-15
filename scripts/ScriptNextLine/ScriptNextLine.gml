@@ -21,6 +21,11 @@ switch(ds_grid_get(grid, 0, scriptLine))
 	case "swapBackdrop": action = swapBackdrop autoContinue = true break
 	case "addFlag": action = addFlag autoContinue = true break
 	case "checkFlag": action = checkFlag autoContinue = true break
+	case "showTextBox": action = showTextBox autoContinue = true break
+	case "setPronoun": action = setPronoun autoContinue = true break
+	case "setName": action = setName autoContinue = false break
+	case "playMusic": action = playMusic autoContinue = true break
+	case "playSfx": action = playMusic autoContinue = true break	
 }
 
 script_execute(action,ds_grid_get(grid, 1, scriptLine), ds_grid_get(grid, 2, scriptLine), ds_grid_get(grid, 3, scriptLine),  ds_grid_get(grid, 4, scriptLine))
