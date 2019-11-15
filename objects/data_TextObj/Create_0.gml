@@ -7,6 +7,8 @@ TextCurrentDisplay = "";	//What is actively displayed on screen
 TextColor = c_white;		//What 
 TextFont = fnt_Default;	
 
+WaitForInput = false;		//Is User input required to continue to the next text
+
 
 // defaults to taking the full 0 - 1 time length 
 // To be used when partioning when the text should be written in the 0 - 1 time frame
