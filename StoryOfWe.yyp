@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02a9c472-248e-4abd-af73-856eda7ca6ca",
+            "Value": {
+                "id": "cc66274a-3d6d-4f19-8397-f154275944cc",
+                "resourcePath": "scripts\\GetFontRef\\GetFontRef.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "03eccb73-6242-4140-a51a-ba997c5c8e2d",
             "Value": {
                 "id": "d712063f-4277-4ab9-aec4-cfd88f98f445",
@@ -439,6 +447,14 @@
             }
         },
         {
+            "Key": "c14c8f90-eae7-4fa3-8756-599f5af24bb9",
+            "Value": {
+                "id": "5de5a9e5-187d-44f5-a9a1-8059c3609d4b",
+                "resourcePath": "scripts\\BuildTextData\\BuildTextData.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c29571c1-9450-4035-a7b7-0fc43f024685",
             "Value": {
                 "id": "15e43682-b80a-4c88-a1b4-453148af0219",
@@ -551,6 +567,14 @@
             }
         },
         {
+            "Key": "f24ed824-cce3-4689-a687-49d93c2861be",
+            "Value": {
+                "id": "9029621d-b3f5-4bce-ba68-0eb55791aa91",
+                "resourcePath": "scripts\\GetColorRef\\GetColorRef.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "7386cd29-138e-4b29-863d-12714cf6ea55",
@@ -599,6 +623,9 @@
         "28421479-c3a7-4f3c-ba49-ce826f57505b",
         "52cab2b3-4eef-4b37-8f8c-c48ebe120b1f",
         "7bbc5670-b1f7-4532-b740-ed53c035881a",
+        "c14c8f90-eae7-4fa3-8756-599f5af24bb9",
+        "02a9c472-248e-4abd-af73-856eda7ca6ca",
+        "f24ed824-cce3-4689-a687-49d93c2861be",
         "09ed4a6c-0518-4c80-ae7b-a379758124b7",
         "0a9a070a-16fa-4962-99ca-1c3b7257a135",
         "ff24bf1c-4dc9-4a9b-ab8f-d14e7986642c",

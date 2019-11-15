@@ -24,6 +24,9 @@ StartTime = 0;
 //How Long should it take to write
 TotalWriteTime = 10;
 
+//Increments by delta_time when writing, used to update writeProgress
+CurrentWritePhase = 0; 
+
 SpaceBuff = 4; //Needed to be added between array elements, cause of issues;
 
 /*

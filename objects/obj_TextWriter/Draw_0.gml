@@ -6,12 +6,17 @@ var xProgPos= 0;
 
 var writeProgress = 0;
 
+#region Text Writer Blockin
+
 //Box
 draw_set_color(c_black)
 draw_rectangle(2,470,1022,766,false)
 draw_set_color(c_white)
 draw_rectangle(2,470,1022,766,true)
 draw_set_valign(fa_top)
+
+#endregion
+
 
 #region Preloop StateMachine Logic
 	
@@ -20,9 +25,10 @@ switch(DrawStatus)
 	case (TextWritingStatus.Empty):
 		break;
 	case (TextWritingStatus.Writing):
+		
 		if (StartTime == 0) StartTime = current_time;
 		writeProgress = (current_time - StartTime) / TotalWriteTime;			
-		
+		/* moving to data obj build function //
 		#region Initialize data_TextObj required data
 		
 		totalCharCount = 0;
@@ -39,8 +45,11 @@ switch(DrawStatus)
 			prevEndTime = TextToWrite[i].DisplayEndTime;
 		}
 		
-		#endregion		
+		#endregion	
+		*/
 		break;	
+	case (TextWritingStatus.Waiting):
+		break;
 	case (TextWritingStatus.Displaying):
 		break;
 	case (TextWritingStatus.Clearing):
@@ -68,7 +77,10 @@ for( var i = 0 ; i < TextCount; i++)
 					other.StartTime = 0; // Set start time to trigger a new one when writing begins
 				break;
 			case (TextWritingStatus.Writing):			
-				currentPhase = writeProgress / other.TotalWriteTime;
+			
+				CurrentWritePhase += delta_time;
+				
+				currentPhase = CurrentWritePhase / other.TotalWriteTime;
 			
 				piecePhase = Constrain(currentPhase, DisplayStartTime, DisplayEndTime);			
 				relativePiecePhase = (piecePhase - DisplayStartTime) / (DisplayEndTime - DisplayStartTime);
@@ -76,6 +88,7 @@ for( var i = 0 ; i < TextCount; i++)
 				copyIndexTarget = floor(string_length(TextToDisplay)*relativePiecePhase);
 				TextCurrentDisplay = string_copy(TextToDisplay, 0, copyIndexTarget);
 				
+				if (relativePiecePhase == 1 and WaitForInput) other.DrawStatus = TextWritingStatus.Waiting;
 				if (currentPhase == 1) other.DrawStatus = TextWritingStatus.Displaying;
 				//No Breaking, bleed directly into the next line
 			case (TextWritingStatus.Displaying):
@@ -84,6 +97,7 @@ for( var i = 0 ; i < TextCount; i++)
 			case (TextWritingStatus.Clearing):
 				//Start clearing out written text, only able to write again when status changes to Empty
 				TextCurrentDisplay = ""; 
+				CurrentWritePhase = 0; //resenting write time
 				
 				other.DrawStatus = TextWritingStatus.Empty;
 				break;

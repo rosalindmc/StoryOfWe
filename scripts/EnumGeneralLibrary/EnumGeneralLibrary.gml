@@ -6,6 +6,7 @@ enum TextWritingStatus
 	Writing,    //activingly writing
 	Displaying, //passivingly written
 	Clearing,   //should be cleared
+	Waiting,	//stop writing, and wait for user input
 	Empty		//displaying nothing
 }
 
